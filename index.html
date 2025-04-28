@@ -39,24 +39,23 @@
         }
 
         .contact-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+            display: inline-block;
+            margin-top: 40px;
+            padding: 14px 28px;
             background: #ffb347; /* Sunset Gold */
-            color: #1e1e1e; /* Dark Charcoal for text */
-            padding: 12px 20px;
-            border-radius: 8px;
+            color: #1e1e1e;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2em;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-            transition: background 0.3s ease;
+            font-size: 1.4em;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .contact-button:hover {
-            background: #ffa726; /* a slightly deeper gold on hover */
+            background: #ffa726;
+            transform: scale(1.05);
         }
-
 
         nav a {
             color: #4E7A69; /* electric blue */
@@ -94,9 +93,8 @@
     <nav>
         <a href="https://instagram.com/mutilans" target="_blank">instagram</a>
         <a href="https://soundcloud.com/mutilans" target="_blank">soundcloud</a>
+        <a href="mailto:proprietor@proprietaryrecords.com" class="contact-button">contact</a>
     </nav>
-
-    <a href="mailto:proprietor@proprietaryrecords.com" class="contact-button">Contact</a>
 
 </body>
 </html>
