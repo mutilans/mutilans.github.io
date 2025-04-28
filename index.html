@@ -41,20 +41,22 @@
         .contact-button {
             display: inline-block;
             margin-top: 40px;
-            padding: 14px 28px;
-            background: #ff9933;
+            padding: 10px 24px;
+            background: rgba(255, 179, 71, 0.25); /* VERY light Sunset Gold, semi-transparent */
             color: #1e1e1e;
+            border: 2px solid #ffb347; /* Thin, soft border */
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.4em;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1.3em;
+            box-shadow: none; /* REMOVE the shadow completely */
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         .contact-button:hover {
-            background: #ffa726;
-            transform: scale(1.05);
+            background: rgba(255, 167, 38, 0.4); /* Slightly darker on hover */
+            color: #000;
+            border-color: #ffa726;
         }
 
         nav a {
