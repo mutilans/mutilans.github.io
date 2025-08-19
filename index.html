@@ -18,7 +18,6 @@
             line-height: 1.8;
         }
 
-
         .koan {
             font-size: 1.6em;
             color: #ff9933;
@@ -84,6 +83,42 @@
             color: #7fff00;
             margin-top: 60px;
         }
+
+        /* New styles for product display */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between products */
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            flex: 1 1 300px; /* Flexible width, minimum 300px per item */
+            max-width: 400px; /* Optional max width to prevent stretching */
+            text-align: left; /* Align product content left for better readability */
+            background: rgba(255, 255, 255, 0.1); /* Optional subtle background to blend with your gradient */
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Override Shopify styles to better match your site's theme */
+        .shopify-buy__product {
+            color: #111; /* Match body text color */
+        }
+
+        .shopify-buy__btn {
+            font-family: 'Neue Montreal', sans-serif !important; /* Match font */
+            background-color: #ff9933 !important; /* Orange accent to match Sanskrit text */
+            color: #111 !important;
+            border: none !important;
+            border-radius: 30px !important; /* Match button style */
+        }
+
+        .shopify-buy__btn:hover {
+            background-color: #ffa726 !important; /* Hover similar to contact button */
+        }
     </style>
 </head>
 <body>
@@ -92,7 +127,156 @@
         सर्वं खल्विदं ब्रह्म
     </div>
 
-    </nav>
+    <!-- Products container for left-right (horizontal) display -->
+    <div class="products-container">
+        <!-- Individual product embed -->
+        <div class="product-item">
+            <div id='product-component-1755561281187'></div>
+        </div>
+
+        <!-- If you have more products, add similar divs here. For example: -->
+        <!-- <div class="product-item"> -->
+        <!--     <div id='product-component-ANOTHER_ID'></div> -->
+        <!-- </div> -->
+    </div>
+
+    <!-- Shopify Buy Button script - place at the end of body for better performance -->
+    <script type="text/javascript">
+    /*!<CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'hcravg-xa.myshopify.com',
+          storefrontAccessToken: '095dc9dca060c500bf2e577d6edf5c82',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: '10077053813055',
+            node: document.getElementById('product-component-1755561281187'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px"
+            }
+          },
+          "button": {
+            "font-family": "Avant Garde, sans-serif",
+            ":hover": {
+              "background-color": "#0076b0"
+            },
+            "background-color": "#0083c3",
+            ":focus": {
+              "background-color": "#0076b0"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "button": false,
+          "buttonWithQuantity": true
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          },
+          "button": {
+            "font-family": "Avant Garde, sans-serif",
+            ":hover": {
+              "background-color": "#0076b0"
+            },
+            "background-color": "#0083c3",
+            ":focus": {
+              "background-color": "#0076b0"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "option": {},
+      "cart": {
+        "styles": {
+          "button": {
+            "font-family": "Avant Garde, sans-serif",
+            ":hover": {
+              "background-color": "#0076b0"
+            },
+            "background-color": "#0083c3",
+            ":focus": {
+              "background-color": "#0076b0"
+            }
+          }
+        },
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        }
+      },
+      "toggle": {
+        "styles": {
+          "toggle": {
+            "font-family": "Avant Garde, sans-serif",
+            "background-color": "#0083c3",
+            ":hover": {
+              "background-color": "#0076b0"
+            },
+            ":focus": {
+              "background-color": "#0076b0"
+            }
+          }
+        }
+      }
+    },
+          });
+          // If adding more products, create additional components here, e.g.:
+          // ui.createComponent('product', { id: 'ANOTHER_PRODUCT_ID', node: document.getElementById('product-component-ANOTHER_ID'), ... });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
 
 </body>
 </html>
