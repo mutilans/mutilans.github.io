@@ -161,6 +161,32 @@
                 margin-right: auto !important;
             }
         }
+
+        /* New style for SoundCloud button container to center it */
+        .soundcloud-container {
+            text-align: center;
+            margin-top: 40px; /* Space above the button */
+            margin-bottom: 60px; /* Space below for bottom placement */
+        }
+
+        .soundcloud-button {
+            display: inline-block;
+            padding: 12px 28px;
+            background: rgba(255, 179, 71, 0.3); /* Slightly adjusted opacity for blend */
+            color: #1e1e1e;
+            border: 2px solid #ff9933; /* Orange border to match accents */
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.4em;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .soundcloud-button:hover {
+            background: rgba(255, 167, 38, 0.5);
+            color: #000;
+            border-color: #ffa726;
+        }
     </style>
 </head>
 <body>
@@ -180,6 +206,11 @@
         <div class="product-item">
             <div id='product-component-1755613133619'></div>
         </div>
+    </div>
+
+    <!-- SoundCloud button container for centering -->
+    <div class="soundcloud-container">
+        <a href="https://soundcloud.com/mutilans" class="soundcloud-button">Listen on SoundCloud</a>
     </div>
 
     <!-- Shopify Buy Button script -->
