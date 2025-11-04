@@ -162,32 +162,38 @@
         }
     }
 
-    /* New style for SoundCloud button container to center it */
-    .soundcloud-container {
+    /* New style for music buttons container to center them */
+    .music-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px; /* Space between buttons */
         text-align: center;
-        margin-top: 40px; /* Space above the button */
-        margin-bottom: 60px; /* Space below for bottom placement */
+        margin-top: 40px;
+        margin-bottom: 60px;
     }
 
-    .soundcloud-button {
+    .music-button {
         display: inline-block;
-        padding: 20px 40px;
+        padding: 20px;
         background: rgba(255, 179, 71, 0.4); /* Increased opacity for more prominence */
         color: #1e1e1e;
         border: 3px solid #ff9933; /* Slightly thicker border */
         border-radius: 30px;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 2.5em;
         transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3); /* Subtle shadow for depth */
     }
 
-    .soundcloud-button:hover {
+    .music-button:hover {
         background: rgba(255, 167, 38, 0.6);
         color: #000;
         border-color: #ffa726;
         box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4); /* Slightly stronger shadow on hover */
+    }
+
+    .music-button img {
+        width: 80px; /* Larger size for prominence */
+        height: auto;
     }
 
     /* New styles for title and subtitle */
@@ -222,9 +228,17 @@
     <a href="https://proprietaryrecords.com">proprietaryrecords.com</a>
 </div>
 
-<!-- SoundCloud button container for centering -->
-<div class="soundcloud-container">
-    <a href="https://soundcloud.com/mutilans" class="soundcloud-button">Music</a>
+<!-- Music buttons container -->
+<div class="music-container">
+    <a href="https://soundcloud.com/mutilans" class="music-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Soundcloud_logo.svg/1280px-Soundcloud_logo.svg.png" alt="SoundCloud">
+    </a>
+    <a href="https://open.spotify.com/search/Mutilans/categories/artists" class="music-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="Spotify">
+    </a>
+    <a href="https://music.apple.com/us/artist/mutilans/1778412031" class="music-button">
+        <img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge.svg?releaseLanguage=en_US" alt="Apple Music">
+    </a>
 </div>
 
 <div class="sanskrit">
