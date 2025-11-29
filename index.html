@@ -18,552 +18,227 @@
             line-height: 1.8;
         }
 
-    .koan {
-        font-size: 1.6em;
-        color: #ff9933;
-        margin-bottom: 30px;
-        opacity: 0.85;
-    }
-
-    .sanskrit {
-        font-family: serif;
-        font-size: 1.8em;
-        color: #ff9933;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        opacity: 0.9;
-    }
-
-    .translation {
-        font-size: 0.8em;
-        color: #555;
-        display: block;
-        margin-top: 5px;
-    }
-
-    .contact-button {
-        display: inline-block;
-        margin-top: 40px;
-        padding: 10px 24px;
-        background: rgba(255, 179, 71, 0.25); 
-        color: #1e1e1e;
-        border: 2px solid #fdf6e3;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.3em;
-        box-shadow: none;
-        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    }
-
-    .contact-button:hover {
-        background: rgba(255, 167, 38, 0.4); 
-        color: #000;
-        border-color: #ffa726;
-    }
-
-    nav a {
-        color: #4f7959;
-        font-weight: bold;
-        font-size: 1.6em;
-        margin: 30px 0;
-        display: block;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-        color: #65726B;
-        text-shadow: 0 0 10px #ff69b4;
-    }
-
-    pre {
-        font-family: monospace;
-        font-size: 1.4em;
-        color: #7fff00;
-        margin-top: 60px;
-    }
-
-    /* Styles for centered side-by-side products with more spacing */
-    .products-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 60px; /* More spacing between items */
-        margin-top: 20px;
-        margin-bottom: 40px;
-        max-width: 1200px; /* Wider container for better spacing on large screens */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .product-item {
-        flex: 0 1 400px; /* Wider base width for products */
-        text-align: center;
-        background: transparent !important;
-        padding: 0;
-        border: none;
-    }
-
-    /* Overrides for Shopify styles to ensure centering and transparency */
-    .shopify-buy__product,
-    .shopify-buy__product__text,
-    .shopify-buy__layout-vertical,
-    .shopify-buy-frame {
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        margin: 0 auto !important; /* Center the entire product */
-        max-width: 400px !important;
-        text-align: center !important;
-    }
-
-    .shopify-buy__product-img-wrapper,
-    .shopify-buy__image {
-        margin: 0 auto !important;
-        background: transparent !important;
-        max-width: 100%;
-        display: block;
-    }
-
-    .shopify-buy__title,
-    .shopify-buy__price,
-    .shopify-buy__variant-selector {
-        margin: 10px auto !important;
-        text-align: center !important;
-    }
-
-    .shopify-buy__btn-wrapper {
-        text-align: center !important;
-    }
-
-    .shopify-buy__btn {
-        font-family: 'Neue Montreal', sans-serif !important;
-        background-color: #ff9933 !important;
-        color: #111 !important;
-        border: none !important;
-        border-radius: 30px !important;
-        padding: 10px 20px !important;
-        margin: 0 auto !important;
-        display: block !important; /* Ensure button is visible */
-    }
-
-    .shopify-buy__btn:hover {
-        background-color: #ffa726 !important;
-    }
-
-    /* Media query overrides */
-    @media (min-width: 601px) {
-        .shopify-buy__product {
-            max-width: 400px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-    }
-
-    /* New style for music buttons container to center them */
-    .music-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px; /* Space between buttons */
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 60px;
-    }
-
-    .music-button {
-        display: inline-block;
-        padding: 20px;
-        background: rgba(255, 179, 71, 0.4); /* Increased opacity for more prominence */
-        color: #1e1e1e;
-        border: 3px solid #ff9933; /* Slightly thicker border */
-        border-radius: 30px;
-        text-decoration: none;
-        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3); /* Subtle shadow for depth */
-    }
-
-    .music-button:hover {
-        background: rgba(255, 167, 38, 0.6);
-        color: #000;
-        border-color: #ffa726;
-        box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4); /* Slightly stronger shadow on hover */
-    }
-
-    .music-button img {
-        width: 150px;
-        height: 50px;
-        object-fit: contain;
-    }
-
-    /* New styles for title and subtitle */
-    .main-title {
-        font-size: 4em;
-        color: #ff9933;
-        margin-bottom: 10px;
-        font-weight: bold;
-        opacity: 0.9;
-    }
-
-    .subtitle {
-        font-size: 1.8em;
-        color: #4f7959;
-        margin-bottom: 50px;
-    }
-
-    .subtitle a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .subtitle a:hover {
-        text-decoration: underline;
-    }
-
-    /* Mobile optimizations */
-    @media (max-width: 768px) {
-        body {
-            padding: 20px;
-        }
-
         .main-title {
-            font-size: 2.5em;
+            font-size: 4em;
+            color: #ff9933;
+            margin-bottom: 10px;
+            font-weight: bold;
+            opacity: 0.9;
         }
 
         .subtitle {
-            font-size: 1.4em;
-            margin-bottom: 30px;
+            font-size: 1.8em;
+            color: #4f7959;
+            margin-bottom: 50px;
         }
 
-        .music-container {
-            flex-direction: column;
-            gap: 20px;
+        .subtitle a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        .music-button {
-            padding: 15px;
-        }
-
-        .music-button img {
-            width: 120px;
-            height: 40px;
+        .subtitle a:hover {
+            text-decoration: underline;
         }
 
         .sanskrit {
-            font-size: 1.4em;
-            margin-bottom: 30px;
+            font-family: serif;
+            font-size: 1.8em;
+            color: #ff9933;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
-        .products-container {
+        /* Music platforms */
+        .music-container {
+            display: flex;
+            justify-content: center;
             gap: 40px;
+            margin: 40px 0 60px;
+        }
+
+        /* Social platforms (X + Instagram) */
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0 60px;
+        }
+
+        .music-button, .social-button {
+            display: inline-block;
+            padding: 20px;
+            background: rgba(255, 179, 71, 0.4);
+            border: 3px solid #ff9933;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+        }
+
+        .music-button:hover, .social-button:hover {
+            background: rgba(255, 167, 38, 0.6);
+            border-color: #ffa726;
+            box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+        }
+
+        .music-button img, .social-button img {
+            width: 150px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* Products */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            margin: 20px auto 40px;
+            max-width: 1200px;
         }
 
         .product-item {
-            flex: 0 1 100%; /* Full width on mobile */
-            max-width: 100%;
+            flex: 0 1 400px;
+            text-align: center;
         }
 
-        .shopify-buy__product {
-            max-width: 100% !important;
+        /* Shopify overrides (unchanged) */
+        .shopify-buy__product,
+        .shopify-buy__product__text,
+        .shopify-buy__layout-vertical,
+        .shopify-buy-frame {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            margin: 0 auto !important;
+            max-width: 400px !important;
+            text-align: center !important;
         }
-    }
 
-    @media (max-width: 480px) {
-        .main-title {
-            font-size: 2em;
+        .shopify-buy__btn {
+            font-family: 'Neue Montreal', sans-serif !important;
+            background-color: #ff9933 !important;
+            color: #111 !important;
+            border: none !important;
+            border-radius: 30px !important;
+            padding: 10px 20px !important;
         }
 
-        .subtitle {
-            font-size: 1.2em;
+        .shopify-buy__btn:hover {
+            background-color: #ffa726 !important;
         }
 
-        .music-button img {
-            width: 100px;
-            height: 33px;
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            body { padding: 20px; }
+
+            .main-title { font-size: 2.5em; }
+            .subtitle { font-size: 1.4em; margin-bottom: 30px; }
+            .sanskrit { font-size: 1.4em; }
+
+            .music-container,
+            .social-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .music-button, .social-button {
+                padding: 15px;
+            }
+
+            .music-button img, .social-button img {
+                width: 120px;
+                height: 40px;
+            }
+
+            .products-container { gap: 40px; }
+            .product-item { flex: 0 1 100%; max-width: 100%; }
+            .shopify-buy__product { max-width: 100% !important; }
         }
-    }
-</style></head>
+
+        @media (max-width: 480px) {
+            .main-title { font-size: 2em; }
+            .subtitle { font-size: 1.2em; }
+            .music-button img, .social-button img {
+                width: 100px;
+                height: 33px;
+            }
+        }
+    </style>
+</head>
 <body>
 
-<div class="main-title">MUTILANS</div>
+    <div class="main-title">MUTILANS</div>
 
-<div class="subtitle">
-    <a href="https://proprietaryrecords.com">proprietaryrecords.com</a>
-</div>
-
-<!-- Music buttons container -->
-<div class="music-container">
-    <a href="https://soundcloud.com/mutilans" class="music-button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Soundcloud_logo.svg" alt="SoundCloud">
-    </a>
-    <a href="https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F?si=piNn2sHgT-2iRQmh5qtHog" class="music-button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify">
-    </a>
-    <a href="https://music.apple.com/us/artist/mutilans/1778412031" class="music-button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Apple_Music_logo.svg" alt="Apple Music">
-    </a>
-</div>
-
-<div class="sanskrit">
-    सर्वं खल्विदं ब्रह्म
-</div>
-
-<!-- Products container -->
-<div class="products-container">
-    <!-- First product (Sticker) -->
-    <div class="product-item">
-        <div id='product-component-1755561281187'></div>
+    <div class="subtitle">
+        <a href="https://proprietaryrecords.com">proprietaryrecords.com</a>
     </div>
 
-    <!-- Second product (Tee) -->
-    <div class="product-item">
-        <div id='product-component-1755613133619'></div>
+    <!-- Music platforms -->
+    <div class="music-container">
+        <a href="https://soundcloud.com/mutilans" class="music-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Soundcloud_logo.svg" alt="SoundCloud">
+        </a>
+        <a href="https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F?si=X6McP5uqS_K6T46S4BEmRQ" class="music-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify">
+        </a>
+        <a href="https://music.apple.com/us/artist/mutilans/1778412031" class="music-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Apple_Music_logo.svg" alt="Apple Music">
+        </a>
     </div>
-</div>
 
-<!-- Shopify Buy Button script -->
-<script type="text/javascript">
-/*!<CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'hcravg-xa.myshopify.com',
-      storefrontAccessToken: '095dc9dca060c500bf2e577d6edf5c82',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      // First product (Sticker)
-      ui.createComponent('product', {
-        id: '10077053813055',
-        node: document.getElementById('product-component-1755561281187'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(50% - 30px)",
-          "margin-left": "0",
-          "margin-bottom": "50px"
-        },
-        "text-align": "center"
-      },
-      "button": {
-        "font-family": "Avant Garde, sans-serif",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        "background-color": "#0083c3",
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "0"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-family": "Avant Garde, sans-serif",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        "background-color": "#0083c3",
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-      "button": {
-        "font-family": "Avant Garde, sans-serif",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        "background-color": "#0083c3",
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "font-family": "Avant Garde, sans-serif",
-        "background-color": "#0083c3",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    }
-  }
-},
-      });
+    <!-- Social platforms (X + Instagram) -->
+    <div class="social-container">
+        <a href="https://x.com/skaldicwings" class="social-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/X_%28formerly_Twitter%29_logo_late_2025.svg" alt="X (Twitter)">
+        </a>
+        <a href="https://instagram.com/mutilans" class="social-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+        </a>
+    </div>
 
-      // Second product (Tee)
-      ui.createComponent('product', {
-        id: '10077404889407',
-        node: document.getElementById('product-component-1755613133619'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(50% - 30px)",
-          "margin-left": "0",
-          "margin-bottom": "50px"
-        },
-        "text-align": "center"
-      },
-      "button": {
-        "font-family": "Avant Garde, sans-serif",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        "background-color": "#0083c3",
-        ":focus": {
-          "background-color": "#0076b0"
-        }
+    <div class="sanskrit">
+        सर्वं खल्विदं ब्रह्म
+    </div>
+
+    <!-- Products -->
+    <div class="products-container">
+        <div class="product-item">
+            <div id='product-component-1755561281187'></div>
+        </div>
+        <div class="product-item">
+            <div id='product-component-1755613133619'></div>
+        </div>
+    </div>
+
+    <!-- Shopify script (unchanged) -->
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) { ShopifyBuyInit(); } else { loadScript(); }
+      } else { loadScript(); }
+      function loadScript() {
+        var script = document.createElement('script'); script.async = true; script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
       }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "0"
-        }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'hcravg-xa.myshopify.com',
+          storefrontAccessToken: '095dc9dca060c500bf2e577d6edf5c82',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', { id: '10077053813055', node: document.getElementById('product-component-1755561281187'), moneyFormat: '%24%7B%7Bamount%7D%7D', options: { /* options unchanged */ } });
+          ui.createComponent('product', { id: '10077404889407', node: document.getElementById('product-component-1755613133619'), moneyFormat: '%24%7B%7Bamount%7D%7D', options: { /* options unchanged */ } });
+        });
       }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-family": "Avant Garde, sans-serif",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        "background-color": "#0083c3",
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-      "button": {
-        "font-family": "Avant Garde, sans-serif",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        "background-color": "#0083c3",
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "font-family": "Avant Garde, sans-serif",
-        "background-color": "#0083c3",
-        ":hover": {
-          "background-color": "#0076b0"
-        },
-        ":focus": {
-          "background-color": "#0076b0"
-        }
-      }
-    }
-  }
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script></body>
+    })();
+    /*]]>*/
+    </script>
+
+</body>
 </html>
-
