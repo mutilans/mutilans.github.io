@@ -66,6 +66,7 @@
             opacity: 0.9;
         }
 
+        /* CD centered */
         .cd-section {
             display: flex;
             justify-content: center;
@@ -79,21 +80,12 @@
             max-width: 400px;
         }
 
-        /* Force Shopify embed to center */
-        .cd-section .shopify-buy__product,
-        .cd-section .shopify-buy__layout-vertical,
-        .cd-section .shopify-buy__product-img-wrapper,
-        .cd-section .shopify-buy__btn-wrapper {
-            margin: 0 auto !important;
-            text-align: center !important;
-            float: none !important;
-            display: block !important;
-        }
-
+        /* Sticker + Tee centered */
         .products-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: flex-start;
             gap: 80px;
             margin: 80px auto;
             max-width: 1000px;
@@ -102,6 +94,20 @@
         .product-item {
             flex: 0 1 400px;
             text-align: center;
+        }
+
+        /* Strong centering overrides for all Shopify embeds */
+        .shopify-buy__product,
+        .shopify-buy__layout-vertical,
+        .shopify-buy__product-img-wrapper,
+        .shopify-buy__btn-wrapper,
+        .shopify-buy__product__title,
+        .shopify-buy__price {
+            margin: 0 auto !important;
+            text-align: center !important;
+            float: none !important;
+            display: block !important;
+            width: auto !important;
         }
 
         .shopify-buy__btn {
@@ -130,6 +136,7 @@
             .link-button { width: 140px; height: 55px; }
             .link-button img { max-height: 28px; max-width: 110px; }
             .sanskrit { font-size: 1.5em; margin: 60px 0; }
+            .products-container { gap: 50px; }
         }
     </style>
 
