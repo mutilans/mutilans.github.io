@@ -17,7 +17,7 @@
         }
 
         .main-title {
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -28,51 +28,52 @@
             margin-bottom: 60px;
         }
 
-        .links-list {
-            list-style: none;
-            padding: 0;
+        .links-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
             margin: 60px 0;
-            font-size: 1.4em;
         }
 
-        .links-list li {
-            margin: 15px 0;
+        .link-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #f0f0f0;
+            border-radius: 30px;
+            transition: background 0.3s;
         }
 
-        .links-list a {
-            color: #4f7959;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border 0.3s;
+        .link-button:hover {
+            background: #e0e0e0;
         }
 
-        .links-list a:hover {
-            border-bottom: 1px solid #4f7959;
+        .link-button img {
+            height: 30px;
+            width: auto;
         }
 
         .sanskrit {
             font-family: serif;
             font-size: 1.8em;
             color: #000;
-            margin: 80px 0;
+            margin: 100px 0;
             opacity: 0.9;
         }
 
+        /* CD centered */
         .cd-section {
+            display: flex;
+            justify-content: center;
             margin: 80px 0;
         }
 
-        .cd-section img {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-        }
-
+        /* Sticker + Tee row */
         .products-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 60px;
+            gap: 80px;
             margin: 80px auto;
             max-width: 1000px;
         }
@@ -82,22 +83,24 @@
             text-align: center;
         }
 
+        /* Minimal Add to Cart button */
         .shopify-buy__btn {
             background: transparent !important;
-            color: #4f7959 !important;
-            border: 1px solid #4f7959 !important;
+            color: #000 !important;
+            border: 1px solid #000 !important;
             border-radius: 0 !important;
-            padding: 10px 20px !important;
+            padding: 12px 24px !important;
             font-family: 'Neue Montreal', sans-serif !important;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 1em;
         }
 
         .shopify-buy__btn:hover {
-            background: #4f7959 !important;
-            color: #ffffff !important;
+            background: #000 !important;
+            color: #fff !important;
         }
 
-        /* Shopify overrides for transparency */
+        /* Shopify transparency */
         .shopify-buy__product, .shopify-buy__layout-vertical, .shopify-buy-frame {
             background: transparent !important;
             border: none !important;
@@ -106,14 +109,16 @@
 
         /* Mobile */
         @media (max-width: 768px) {
-            .main-title { font-size: 2.5em; }
-            .links-list { font-size: 1.2em; }
-            .sanskrit { font-size: 1.5em; }
-            .products-container { gap: 40px; }
+            .main-title { font-size: 2.8em; }
+            .links-container { gap: 20px; }
+            .link-button { padding: 12px 20px; }
+            .link-button img { height: 25px; }
+            .sanskrit { font-size: 1.5em; margin: 60px 0; }
+            .products-container { gap: 50px; }
         }
     </style>
 
-    <!-- Structured Data (unchanged) -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -139,13 +144,24 @@
 
     <div class="subtitle">proprietaryrecords.com</div>
 
-    <ul class="links-list">
-        <li><a href="https://soundcloud.com/mutilans" target="_blank" rel="noopener">SoundCloud</a></li>
-        <li><a href="https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F" target="_blank" rel="noopener">Spotify</a></li>
-        <li><a href="https://music.apple.com/us/artist/mutilans/1778412031" target="_blank" rel="noopener">Apple Music</a></li>
-        <li><a href="https://x.com/skaldicwings" target="_blank" rel="noopener">X</a></li>
-        <li><a href="https://instagram.com/mutilans" target="_blank" rel="noopener">Instagram</a></li>
-    </ul>
+    <!-- Logo buttons -->
+    <div class="links-container">
+        <a href="https://soundcloud.com/mutilans" class="link-button" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Soundcloud_logo.svg" alt="SoundCloud">
+        </a>
+        <a href="https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F" class="link-button" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify">
+        </a>
+        <a href="https://music.apple.com/us/artist/mutilans/1778412031" class="link-button" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Apple_Music_logo.svg" alt="Apple Music">
+        </a>
+        <a href="https://x.com/skaldicwings" class="link-button" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/X_%28formerly_Twitter%29_logo_late_2025.svg" alt="X">
+        </a>
+        <a href="https://instagram.com/mutilans" class="link-button" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+        </a>
+    </div>
 
     <div class="sanskrit">
         सर्वं खल्विदं ब्रह्म
@@ -158,7 +174,7 @@
         </div>
     </div>
 
-    <!-- Sticker + Tee below -->
+    <!-- Sticker + Tee -->
     <div class="products-container">
         <div class="product-item">
             <div id='product-component-1755561281187'></div>
@@ -168,7 +184,7 @@
         </div>
     </div>
 
-    <!-- Shopify scripts (unchanged) -->
+    <!-- Shopify scripts -->
     <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
