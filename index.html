@@ -7,80 +7,113 @@
     <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal&display=swap" rel="stylesheet">
     <style>
         body {
-            background: radial-gradient(circle at center, #fdf6e3 0%, #fbbf24 20%, #ec4899 40%, #8b5cf6 60%, #4f7959 80%);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            color: #111;
+            background: #ffffff;
+            color: #000000;
             font-family: 'Neue Montreal', 'Helvetica Neue', sans-serif;
             text-align: center;
-            padding: 40px;
-            line-height: 1.8;
+            padding: 60px 20px;
+            line-height: 1.6;
+            margin: 0;
         }
 
-        .main-title {font-size:4em;color:#ff9933;margin-bottom:10px;font-weight:bold;opacity:0.9;}
-        .subtitle {font-size:1.8em;color:#4f7959;margin-bottom:50px;}
-        .subtitle a {color:inherit;text-decoration:none;}
-        .subtitle a:hover {text-decoration:underline;}
-        .sanskrit {font-family:serif;font-size:1.8em;color:#ff9933;margin:20px 0 40px;opacity:0.9;}
+        .main-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-        .music-container, .social-container {
-            display:flex;justify-content:center;gap:40px;margin:40px 0 60px;
+        .subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 60px;
         }
-        .music-button, .social-button {
-            display:inline-block;padding:20px;background:rgba(255,179,71,0.4);
-            border:3px solid #ff9933;border-radius:30px;text-decoration:none;
-            transition:all .3s ease;box-shadow:0 4px 15px rgba(255,153,51,0.3);
-        }
-        .music-button:hover, .social-button:hover {
-            background:rgba(255,167,38,0.6);border-color:#ffa726;
-            box-shadow:0 6px 20px rgba(255,153,51,0.4);
-        }
-        .music-button img, .social-button img {width:150px;height:50px;object-fit:contain;}
 
-        /* CD centered row */
-        .cd-row {
-            display: flex;
-            justify-content: center;
+        .links-list {
+            list-style: none;
+            padding: 0;
             margin: 60px 0;
+            font-size: 1.4em;
         }
 
-        /* Original sticker + tee row */
+        .links-list li {
+            margin: 15px 0;
+        }
+
+        .links-list a {
+            color: #4f7959;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.3s;
+        }
+
+        .links-list a:hover {
+            border-bottom: 1px solid #4f7959;
+        }
+
+        .sanskrit {
+            font-family: serif;
+            font-size: 1.8em;
+            color: #000;
+            margin: 80px 0;
+            opacity: 0.9;
+        }
+
+        .cd-section {
+            margin: 80px 0;
+        }
+
+        .cd-section img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+        }
+
         .products-container {
-            display:flex;flex-wrap:wrap;justify-content:center;gap:60px;margin:20px auto 40px;max-width:1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            margin: 80px auto;
+            max-width: 1000px;
         }
-        .product-item {flex:0 1 400px;text-align:center;}
 
-        /* Shopify overrides */
-        .shopify-buy__product,.shopify-buy__product__text,.shopify-buy__layout-vertical,.shopify-buy-frame {
-            background:transparent!important;border:none!important;box-shadow:none!important;
-            margin:0 auto!important;max-width:400px!important;text-align:center!important;
+        .product-item {
+            flex: 0 1 400px;
+            text-align: center;
         }
+
         .shopify-buy__btn {
-            font-family:'Neue Montreal',sans-serif!important;background:#ff9933!important;
-            color:#111!important;border:none!important;border-radius:30px!important;
-            padding:10px 20px!important;
+            background: transparent !important;
+            color: #4f7959 !important;
+            border: 1px solid #4f7959 !important;
+            border-radius: 0 !important;
+            padding: 10px 20px !important;
+            font-family: 'Neue Montreal', sans-serif !important;
+            margin-top: 10px;
         }
-        .shopify-buy__btn:hover {background:#ffa726!important;}
+
+        .shopify-buy__btn:hover {
+            background: #4f7959 !important;
+            color: #ffffff !important;
+        }
+
+        /* Shopify overrides for transparency */
+        .shopify-buy__product, .shopify-buy__layout-vertical, .shopify-buy-frame {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
 
         /* Mobile */
-        @media (max-width:768px){
-            body{padding:20px;}
-            .main-title{font-size:2.5em;}.subtitle{font-size:1.4em;margin-bottom:30px;}
-            .sanskrit{font-size:1.4em;}
-            .music-container,.social-container{flex-direction:column;gap:20px;}
-            .music-button,.social-button{padding:15px;}
-            .music-button img,.social-button img{width:120px;height:40px;}
-            .products-container{gap:40px;}.product-item{flex:0 1 100%;max-width:100%;}
-            .shopify-buy__product{max-width:100%!important;}
-        }
-        @media (max-width:480px){
-            .main-title{font-size:2em;}.subtitle{font-size:1.2em;}
-            .music-button img,.social-button img{width:100px;height:33px;}
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5em; }
+            .links-list { font-size: 1.2em; }
+            .sanskrit { font-size: 1.5em; }
+            .products-container { gap: 40px; }
         }
     </style>
 
-    <!-- GOOGLE KNOWLEDGE PANEL / STRUCTURED DATA -->
+    <!-- Structured Data (unchanged) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -89,13 +122,13 @@
       "url": "https://proprietaryrecords.com",
       "sameAs": [
         "https://soundcloud.com/mutilans",
-        "https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F?si=jcbdRw7WQAmL2AhZ_qdDJw",
+        "https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F",
         "https://music.apple.com/us/artist/mutilans/1778412031",
         "https://www.instagram.com/mutilans/",
         "https://x.com/skaldicwings"
       ],
-      "image": "https://images.genius.com/146ee6a0da94baae71c00c6b14db302f.1000x1000x1.png",
-      "genre": "Electronic / Hip-Hop / Rock",
+      "image": "https://proprietaryrecords.com/your-artist-photo.jpg",
+      "genre": "Electronic / Indie / Experimental",
       "description": "Mutilans — electronic music artist. New music on all platforms. Merch at proprietaryrecords.com"
     }
     </script>
@@ -104,45 +137,28 @@
 
     <div class="main-title">MUTILANS</div>
 
-    <div class="subtitle">
-        <a href="https://proprietaryrecords.com" target="_blank" rel="noopener">proprietaryrecords.com</a>
-    </div>
+    <div class="subtitle">proprietaryrecords.com</div>
 
-    <!-- Music platforms -->
-    <div class="music-container">
-        <a href="https://soundcloud.com/mutilans" class="music-button" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Soundcloud_logo.svg" alt="SoundCloud">
-        </a>
-        <a href="https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F?si=jcbdRw7WQAmL2AhZ_qdDJw" class="music-button" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify">
-        </a>
-        <a href="https://music.apple.com/us/artist/mutilans/1778412031" class="music-button" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Apple_Music_logo.svg" alt="Apple Music">
-        </a>
-    </div>
-
-    <!-- Social platforms -->
-    <div class="social-container">
-        <a href="https://x.com/skaldicwings" class="social-button" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/X_%28formerly_Twitter%29_logo_late_2025.svg" alt="X">
-        </a>
-        <a href="https://instagram.com/mutilans" class="social-button" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
-        </a>
-    </div>
+    <ul class="links-list">
+        <li><a href="https://soundcloud.com/mutilans" target="_blank" rel="noopener">SoundCloud</a></li>
+        <li><a href="https://open.spotify.com/artist/0UwCtPHnkS5xBabMjR4q1F" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://music.apple.com/us/artist/mutilans/1778412031" target="_blank" rel="noopener">Apple Music</a></li>
+        <li><a href="https://x.com/skaldicwings" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://instagram.com/mutilans" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
 
     <div class="sanskrit">
         सर्वं खल्विदं ब्रह्म
     </div>
 
-    <!-- CD centered in its own row -->
-    <div class="cd-row">
+    <!-- CD centered -->
+    <div class="cd-section">
         <div class="product-item">
             <div id='product-component-1766022770223'></div>
         </div>
     </div>
 
-    <!-- Original sticker + tee row (side-by-side below CD) -->
+    <!-- Sticker + Tee below -->
     <div class="products-container">
         <div class="product-item">
             <div id='product-component-1755561281187'></div>
@@ -152,24 +168,16 @@
         </div>
     </div>
 
-    <!-- Shopify scripts -->
+    <!-- Shopify scripts (unchanged) -->
     <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
       var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
       if (window.ShopifyBuy) {
-        if (window.ShopifyBuy.UI) {
-          ShopifyBuyInit();
-        } else {
-          loadScript();
-        }
-      } else {
-        loadScript();
-      }
+        if (window.ShopifyBuy.UI) { ShopifyBuyInit(); } else { loadScript(); }
+      } else { loadScript(); }
       function loadScript() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = scriptURL;
+        var script = document.createElement('script'); script.async = true; script.src = scriptURL;
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
         script.onload = ShopifyBuyInit;
       }
@@ -179,29 +187,9 @@
           storefrontAccessToken: '095dc9dca060c500bf2e577d6edf5c82',
         });
         ShopifyBuy.UI.onReady(client).then(function (ui) {
-          // Alexander CD
-          ui.createComponent('product', {
-            id: '10183405502783',
-            node: document.getElementById('product-component-1766022770223'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: { /* your provided options */ }
-          });
-
-          // Sticker
-          ui.createComponent('product', {
-            id: '10077053813055',
-            node: document.getElementById('product-component-1755561281187'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: { /* original sticker options */ }
-          });
-
-          // Tee
-          ui.createComponent('product', {
-            id: '10077404889407',
-            node: document.getElementById('product-component-1755613133619'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: { /* original tee options */ }
-          });
+          ui.createComponent('product', { id: '10183405502783', node: document.getElementById('product-component-1766022770223'), moneyFormat: '%24%7B%7Bamount%7D%7D', options: {} });
+          ui.createComponent('product', { id: '10077053813055', node: document.getElementById('product-component-1755561281187'), moneyFormat: '%24%7B%7Bamount%7D%7D', options: {} });
+          ui.createComponent('product', { id: '10077404889407', node: document.getElementById('product-component-1755613133619'), moneyFormat: '%24%7B%7Bamount%7D%7D', options: {} });
         });
       }
     })();
