@@ -69,8 +69,25 @@
         .cd-section {
             display: flex;
             justify-content: center;
+            align-items: center;
             margin: 80px auto;
             max-width: 500px;
+        }
+
+        .cd-section .product-item {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Force Shopify embed to center */
+        .cd-section .shopify-buy__product,
+        .cd-section .shopify-buy__layout-vertical,
+        .cd-section .shopify-buy__product-img-wrapper,
+        .cd-section .shopify-buy__btn-wrapper {
+            margin: 0 auto !important;
+            text-align: center !important;
+            float: none !important;
+            display: block !important;
         }
 
         .products-container {
