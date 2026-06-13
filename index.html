@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proprietary Records</title>
     
-    <!-- Ramsey font – upload your font files to the same folder as this HTML file -->
     <style>
         @font-face {
             font-family: 'Ramsey';
@@ -14,7 +13,6 @@
             font-style: normal;
             font-display: swap;
         }
-        
         @font-face {
             font-family: 'Ramsey';
             src: url('Ramsey SD.ttf') format('truetype');
@@ -48,10 +46,20 @@
             text-transform: uppercase;
         }
 
-        /* Book display – centered and simple */
-        .book-hub {
-            max-width: 520px;
+        /* Container for all books */
+        .books-container {
+            max-width: 1200px;
             margin: 0 auto 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 80px 40px;
+            padding: 0 20px;
+        }
+
+        /* Individual book card */
+        .book-hub {
+            max-width: 380px;
+            margin: 0 auto;
         }
 
         .book-cover {
@@ -80,9 +88,6 @@
             font-size: 1.1em;
             color: #555;
             margin-bottom: 30px;
-            max-width: 380px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .download-buttons {
@@ -114,7 +119,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* Twitter button at the very bottom – same style as your original */
         .footer {
             margin-top: 120px;
         }
@@ -138,12 +142,11 @@
         .link-button img {
             max-height: 32px;
             max-width: 130px;
-            width: auto;
-            height: auto;
         }
 
         @media (max-width: 768px) {
             .main-title { font-size: 2.9em; }
+            .books-container { grid-template-columns: 1fr; gap: 70px; }
             .book-cover { max-width: 260px; }
             .download-button { width: 190px; height: 62px; font-size: 1.1em; }
         }
@@ -154,31 +157,40 @@
     <div class="main-title">Proprietary Records</div>
     <div class="subtitle">Publishing</div>
 
-    <!-- Your single book – centered and very simple -->
-    <div class="book-hub">
-        <!-- REPLACE THIS SRC WITH YOUR ACTUAL COVER FILE NAME (e.g. my-book-cover.jpg) -->
-        <img src="cover.jpg" alt="Book Cover" class="book-cover">
-        
-        <!-- REPLACE THESE WITH YOUR ACTUAL BOOK TITLE AND SUBTITLE -->
-        <div class="book-title">Revolution of Education</div>
-        <div class="book-subtitle">Baldur von Schirach</div>
-        
-        <div class="download-buttons">
-            <!-- REPLACE THIS HREF WITH YOUR ACTUAL EPUB FILE NAME -->
-            <a href="revolution-of-education.epub" class="download-button" download>
-                DOWNLOAD EPUB
-            </a>
-            
-            <!-- If you also have a PDF, uncomment and replace the href below -->
-            <!--
-            <a href="your-book.pdf" class="download-button" download>
-                DOWNLOAD PDF
-            </a>
-            -->
+    <!-- MULTIPLE BOOKS GO HERE -->
+    <div class="books-container">
+
+        <!-- === BOOK 1 === -->
+        <div class="book-hub">
+            <img src="cover.jpg" alt="Revolution of Education" class="book-cover">
+            <div class="book-title">Revolution of Education</div>
+            <div class="book-subtitle">Baldur von Schirach</div>
+            <div class="download-buttons">
+                <a href="revolution-of-education.epub" class="download-button" download>
+                    DOWNLOAD EPUB
+                </a>
+            </div>
         </div>
+
+        <!-- === BOOK 2 === -->
+        <div class="book-hub">
+            <img src="book-cover.jpg" alt="Second Book Title" class="book-cover">
+            <div class="book-title">Second Book Title</div>
+            <div class="book-subtitle">Author Name</div>
+            <div class="download-buttons">
+                <a href="homes-of-the-hitler-youth.epub" class="download-button" download>
+                    DOWNLOAD EPUB
+                </a>
+                <!-- Add PDF if you want -->
+                <!-- <a href="second-book.pdf" class="download-button" download>DOWNLOAD PDF</a> -->
+            </div>
+        </div>
+
+        <!-- === ADD MORE BOOKS BELOW (just copy-paste another block) === -->
+
     </div>
 
-    <!-- Twitter / X button at the bottom, exactly like your original style -->
+    <!-- X / Twitter button -->
     <div class="footer">
         <a href="https://x.com/skaldicwings" class="link-button" target="_blank" rel="noopener">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/X_%28formerly_Twitter%29_logo_late_2025.svg" alt="X">
